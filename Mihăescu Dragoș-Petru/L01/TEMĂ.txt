@@ -1,1 +1,12 @@
-Test
+Stack Overflow este o platoformă publică online pe care o vasta categorie de persoane o pot utiliza. Astfel, prin intermediul platformei, utilizatorii pot face schimb de cunoștințe, 
+pot primi sau da răspunsuri ori soluții nelămuririlor și problemelor întâmpinate la scrierea unui cod.
+
+Funcționalități:
+-funcțiile de login /înregistrare(aceasta se poate face si cu Facebook/Google)
+-se pot vizualiza utilizatorii platformei și activitatea acestora
+-se pot pune întrebări și se poate raspunde la întrebările adresate de alți utilizatori, putându-se chiar vota răspunsurile utile. Atât întrebările ,cât și răspunsurile se
+pot edita mai apoi.
+-pentru căutarea întrebarii dorite există opțiunea de search bar dupa un cuvânt cheie , aplicarea unor diferite filtre sau în funcție de tags.
+-se pot căuta job-uri. Pentru căutarea job-ului dorit există opțiunea de search bar după un cuvânt cheie sau aplicarea unor diferite filtre. 
+-există optiunea for teams în care un grup de oameni pot avea discuții despre anumite probleme ce le întâmpină la proiectul lor.
+-există about unde putem afla informații despre platformă
