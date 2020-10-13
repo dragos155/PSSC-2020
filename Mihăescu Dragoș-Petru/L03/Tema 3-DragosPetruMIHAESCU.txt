@@ -1,0 +1,45 @@
+Workflows
+
+   Bounded context:"Questions context"
+     Workflow:" Ask Question "
+        Triggered by:"Ask Question request received"
+        Input:"Ask Question form"(Title,body(descrierea detaliat a intrebarii/problemei,cod),tag)
+        Output:“Question posted”event
+        Side effects:"Confirmation question"(via email)
+
+Workflows documentation
+
+   Workflow: “Ask Question”
+	○ Input: “Ask Question form”
+	○ Output: “Question posted”event or Invalid question form 
+
+  //step1
+        Do validate Ask Question form
+	If form is invalid then
+	stop
+
+  //step2
+       send confirmation email 
+
+  //step3
+       return "question posted"event
+
+Workflows documentation
+
+   Substept"Validate question form"
+     	input:“Unvalidated question form”
+	output:“Validated question form”
+	dependencies: title validator, body validator, tags validator
+
+   validate the question title
+   
+   validate the question body
+
+   validate the question tags
+
+   if all validation passed then
+           return “Validated question form”
+   else  return Validation error
+
+
+         
