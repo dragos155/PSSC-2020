@@ -11,13 +11,15 @@ using static StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledge
 using StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgementOp;
 using static StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp.SendReplyAuthorAcknowledgementResult;
 using StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp;
-using static StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionOp.CreateQuestionResult;
-using StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionOp;
+using static StackUnderflow.Domain.Core.Contexts.Questions.PostQuestionOp.PostQuestionResult;
+using StackUnderflow.Domain.Core.Contexts.Questions.PostQuestionOp;
 
 namespace StackUnderflow.Domain.Core.Contexts.Questions
 {
     public static class QuestionsContext
     {
+        public static Port<IPostQuestionResult> PostQuestion(PostQuestionCmd postQuestionCmd) =>
+           NewPort<PostQuestionCmd, IPostQuestionResult>(postQuestionCmd);
         public static Port<ICreateReplyResult> CreateReply(CreateReplyCmd createReplyCmd) =>
            NewPort<CreateReplyCmd, ICreateReplyResult>(createReplyCmd);
 
@@ -29,7 +31,5 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions
 
         public static Port<ISendReplyAuthorAcknowledgementResult> SendReplyAuthorAcknowledgement(SendReplyAuthorAcknowledgementCmd cmd) =>
            NewPort<SendReplyAuthorAcknowledgementCmd, ISendReplyAuthorAcknowledgementResult>(cmd);
-
-        public static Port<ICreateQuestionResult> QuestionCreate(CreateQuestionCmd cmd) => NewPort<CreateQuestionCmd, ICreateQuestionResult>(cmd);
     }
 }

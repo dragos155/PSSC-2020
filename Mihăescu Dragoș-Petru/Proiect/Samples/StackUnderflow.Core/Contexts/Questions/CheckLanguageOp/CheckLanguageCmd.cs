@@ -7,6 +7,11 @@ namespace StackUnderflow.Domain.Schema.Questions.CheckLanguageOp
 {
     public class CheckLanguageCmd
     {
+        public CheckLanguageCmd()
+        {
+
+        }
+
         public CheckLanguageCmd(string text)
         {
             Text = text;

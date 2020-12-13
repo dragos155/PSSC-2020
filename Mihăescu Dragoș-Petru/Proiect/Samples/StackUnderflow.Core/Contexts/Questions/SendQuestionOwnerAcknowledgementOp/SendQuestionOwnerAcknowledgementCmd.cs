@@ -6,6 +6,11 @@ namespace StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgemen
 {
     public class SendQuestionOwnerAcknowledgementCmd
     {
+        public SendQuestionOwnerAcknowledgementCmd()
+        {
+
+        }
+
         public SendQuestionOwnerAcknowledgementCmd(int questionId, int questionOwnerId)
         {
             QuestionId = questionId;

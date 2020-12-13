@@ -45,7 +45,7 @@ namespace StackUnderflow.API.Rest.Controllers
 
             var r = await _interpreter.Interpret(expr, ctx, dep);
 
-            //_dbContext.Replies.Add(new DatabaseModel.Models.Reply { Body = cmd.Body, AuthorUserId = 1, QuestionId = cmd.QuestionId, ReplyId = 4 });
+            _dbContext.Replies.Add(new DatabaseModel.Models.Reply { Body = cmd.Body, AuthorUserId = 1, QuestionId = cmd.QuestionId, ReplyId = 4 });
             //var reply = await _dbContext.Replies.Where(r => r.ReplyId == 4).SingleOrDefaultAsync();
             //reply.Body = "Text updated";
             //_dbContext.Replies.Update(reply);

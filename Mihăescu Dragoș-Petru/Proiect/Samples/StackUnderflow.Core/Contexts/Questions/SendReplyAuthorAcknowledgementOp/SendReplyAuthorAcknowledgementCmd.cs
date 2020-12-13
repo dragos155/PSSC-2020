@@ -6,6 +6,11 @@ namespace StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementO
 {
     public class SendReplyAuthorAcknowledgementCmd
     {
+        public SendReplyAuthorAcknowledgementCmd()
+        {
+
+        }
+
         public SendReplyAuthorAcknowledgementCmd(Guid replyAuthorId, int questionId, int answerId)
         {
             ReplyAuthorId = replyAuthorId;
