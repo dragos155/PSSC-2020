@@ -11,12 +11,15 @@ namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
         {
 
         }
-        public CreateReplyCmd(int questionId, Guid authorUserId, string body)
+        public CreateReplyCmd(int replyId,int questionId, Guid authorUserId, string body)
         {
+            ReplyId = replyId;
             QuestionId = questionId;
             AuthorUserId = authorUserId;
             Body = body;
         }
+        [Required]
+        public int ReplyId { get; set; }
         [Required]
         public int QuestionId { get; set; }
         [Required]

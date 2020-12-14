@@ -13,7 +13,7 @@ namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
 
         public class ReplyCreated : ICreateReplyResult
         {
-            public ReplyCreated(int replyId, int questionId, int authorUserId, string body)
+            public ReplyCreated(int replyId, int questionId, Guid authorUserId, string body)
             {
                 ReplyId = replyId;
                 QuestionId = questionId;
@@ -23,7 +23,7 @@ namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
 
             public int ReplyId { get; }
             public int QuestionId { get; }
-            public int AuthorUserId { get; }
+            public Guid AuthorUserId { get; }
             public string Body { get; }
         }
 

@@ -10,7 +10,7 @@ namespace StackUnderflow.DatabaseModel.Models
     {
         public int ReplyId { get; set; }
         public int QuestionId { get; set; }
-        public int AuthorUserId { get; set; }
+        public Guid AuthorUserId { get; set; }
         public string Body { get; set; }
     }
 }
