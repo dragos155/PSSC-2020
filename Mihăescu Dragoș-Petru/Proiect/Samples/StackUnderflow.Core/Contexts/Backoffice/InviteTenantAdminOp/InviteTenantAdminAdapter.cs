@@ -9,6 +9,7 @@ using Access.Primitives.IO.Mocking;
 using Access.Primitives.Extensions.ObjectExtensions;
 using StackUnderflow.Domain.Schema.Backoffice;
 using StackUnderflow.EF.Models;
+using StackUnderflow.DatabaseModel.Models;
 
 namespace StackUnderflow.Adapters.InviteAdmin
 {

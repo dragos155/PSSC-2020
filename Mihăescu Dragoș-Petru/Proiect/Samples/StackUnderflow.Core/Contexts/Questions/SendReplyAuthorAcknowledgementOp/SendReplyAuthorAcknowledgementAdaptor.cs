@@ -1,11 +1,10 @@
 ﻿using Access.Primitives.Extensions.ObjectExtensions;
 using Access.Primitives.IO;
-using StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using static StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp.SendReplyAuthorAcknowledgementResult;
+using static StackUnderflow.Domain.Core.Contexts.Questions.SendReplyAuthorAcknowledgementOp.SendReplyAuthorAcknowledgementResult;
 
 namespace StackUnderflow.Domain.Core.Contexts.Questions.SendReplyAuthorAcknowledgementOp
 {

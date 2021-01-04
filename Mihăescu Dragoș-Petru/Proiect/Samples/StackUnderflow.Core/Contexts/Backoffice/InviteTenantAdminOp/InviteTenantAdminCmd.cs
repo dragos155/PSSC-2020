@@ -5,6 +5,7 @@ using System.Text;
 using Access.Primitives.IO;
 using EarlyPay.Primitives.ValidationAttributes;
 using LanguageExt;
+using StackUnderflow.DatabaseModel.Models;
 using StackUnderflow.EF.Models;
 
 namespace StackUnderflow.Domain.Schema.Backoffice.InviteTenantAdminOp

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgementOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.SendQuestionOwnerAcknowledgementOp
 {
     public class SendQuestionOwnerAcknowledgementCmd
     {
@@ -10,14 +10,21 @@ namespace StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgemen
         {
 
         }
+        public SendQuestionOwnerAcknowledgementCmd(Guid questionOwnerId, string email)
+        {
+            QuestionOwnerId = questionOwnerId;
+            Email = email;
+        }
 
-        public SendQuestionOwnerAcknowledgementCmd(int questionId, int questionOwnerId)
+        public SendQuestionOwnerAcknowledgementCmd(int questionId, Guid questionOwnerId)
         {
             QuestionId = questionId;
             QuestionOwnerId = questionOwnerId;
         }
 
+     
         public int QuestionId { get; }
-        public int QuestionOwnerId { get; }
+        public Guid QuestionOwnerId { get; }
+        public string Email { get; }
     }
 }

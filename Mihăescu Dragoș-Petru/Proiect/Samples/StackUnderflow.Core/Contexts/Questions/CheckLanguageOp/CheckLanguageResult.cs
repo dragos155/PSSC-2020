@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.CheckLanguageOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.CheckLanguageOp
 {
     [AsChoice]
     public static partial class CheckLanguageResult
@@ -12,11 +12,12 @@ namespace StackUnderflow.Domain.Schema.Questions.CheckLanguageOp
 
         public class ValidationSucceeded : ICheckLanguageResult
         {
-            public ValidationSucceeded(string text)
+            public ValidationSucceeded(int replyId,string text)
             {
+                ReplyId = replyId;
                 Text = text;
             }
-
+            public int ReplyId { get; set; }
             public string Text { get; }
         }
 

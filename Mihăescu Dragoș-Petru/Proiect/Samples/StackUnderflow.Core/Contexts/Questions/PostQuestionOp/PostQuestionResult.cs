@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CSharp.Choices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace StackUnderflow.Domain.Core.Contexts.Questions.PostQuestionOp
 {
+    [AsChoice]
     public static partial class PostQuestionResult
     {
         public interface IPostQuestionResult { }

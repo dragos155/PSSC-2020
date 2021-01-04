@@ -1,11 +1,12 @@
 ﻿using Access.Primitives.Extensions.ObjectExtensions;
 using Access.Primitives.IO;
-using StackUnderflow.Domain.Schema.Questions.CreateAnswerOp;
+using StackUnderflow.DatabaseModel.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static StackUnderflow.Domain.Schema.Questions.CreateAnswerOp.CreateReplyResult;
+using static StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp.CreateReplyResult;
 
 namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
 {
@@ -19,7 +20,7 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
         public async override Task<ICreateReplyResult> Work(CreateReplyCmd cmd, QuestionsWriteContext state, QuestionsDependencies dependencies)
         {
             var workflow = from valid in cmd.TryValidate()
-                           let t = AddAnswerToQuestion(state, CreateAnswerFromCmd(cmd))
+                           let t = AddReplyToQuestion(state, CreateReplyFromCmd(cmd))
                            select t;
 
             var result =  await workflow.Match(
@@ -30,14 +31,26 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
             return result;
         }
 
-        private ICreateReplyResult AddAnswerToQuestion(QuestionsWriteContext state, object v)
+        private ICreateReplyResult AddReplyToQuestion(QuestionsWriteContext state, Reply reply)
         {
-            return new ReplyCreated(1, 2, 3, "My answer body");
+            if (state.Replies.Any(p => p.ReplyId.Equals(reply.ReplyId)))
+                return new ReplyNotCreated("Reply was not created");
+
+            if (state.Replies.All(p => p.ReplyId != reply.ReplyId))
+                state.Replies.Add(reply);
+            return new ReplyCreated(reply.ReplyId, reply.QuestionId, reply.AuthorUserId, reply.Body);
         }
 
-        private object CreateAnswerFromCmd(CreateReplyCmd cmd)
+        private Reply CreateReplyFromCmd(CreateReplyCmd cmd)
         {
-            return new { };
+            var reply = new Reply()
+            {
+                ReplyId = cmd.ReplyId,
+                QuestionId = cmd.QuestionId,
+                AuthorUserId = cmd.AuthorUserId,
+                Body = cmd.Body,
+            };
+            return reply;
         }
     }
 }

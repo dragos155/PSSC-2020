@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
 {
     [AsChoice]
     public static partial class CreateReplyResult

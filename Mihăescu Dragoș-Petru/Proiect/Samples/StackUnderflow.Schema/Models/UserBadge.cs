@@ -1,7 +1,8 @@
-﻿using System;
+﻿using StackUnderflow.EF.Models;
+using System;
 using System.Collections.Generic;
 
-namespace StackUnderflow.EF.Models
+namespace StackUnderflow.DatabaseModel.Models
 {
     public partial class UserBadge
     {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgementOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.SendQuestionOwnerAcknowledgementOp
 {
     [AsChoice]
     public static partial class SendQuestionOwnerAcknowledgementResult
@@ -12,14 +12,16 @@ namespace StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgemen
 
         public class AcknowledgementSent : ISendQuestionOwnerAcknowledgementResult
         {
-            public AcknowledgementSent(int questionId, int questionOwnerId)
+            public AcknowledgementSent(int questionId, Guid questionOwnerId, InvitationLetter letter)
             {
                 QuestionId = questionId;
                 QuestionOwnerId = questionOwnerId;
+                Letter = letter;
             }
 
+            public InvitationLetter Letter { get; set; }
             public int QuestionId { get; }
-            public int QuestionOwnerId { get; }
+            public Guid QuestionOwnerId { get; }
         }
 
         public class AcknowledgementNotSent : ISendQuestionOwnerAcknowledgementResult

@@ -12,6 +12,7 @@ using StackUnderflow.Domain.Core.Contexts;
 using StackUnderflow.EF.Models;
 using static StackUnderflow.Domain.Schema.Backoffice.CreateTenantOp.CreateTenantResult;
 using StackUnderflow.Domain.Schema.Backoffice;
+using StackUnderflow.DatabaseModel.Models;
 
 namespace StackUnderflow.Backoffice.Adapters.CreateTenant
 {

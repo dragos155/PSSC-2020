@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.SendReplyAuthorAcknowledgementOp
 {
     [AsChoice]
     public static partial class SendReplyAuthorAcknowledgementResult

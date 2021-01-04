@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StackUnderflow.EF.Models
+namespace StackUnderflow.DatabaseModel.Models
 {
     public partial class PostType
     {

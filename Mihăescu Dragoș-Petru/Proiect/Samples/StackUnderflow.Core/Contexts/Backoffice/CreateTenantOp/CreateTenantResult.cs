@@ -5,6 +5,7 @@ using Access.Primitives.Extensions.Cloning;
 using Access.Primitives.IO;
 using CSharp.Choices;
 using LanguageExt;
+using StackUnderflow.DatabaseModel.Models;
 using StackUnderflow.EF.Models;
 
 namespace StackUnderflow.Domain.Schema.Backoffice.CreateTenantOp

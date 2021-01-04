@@ -12,6 +12,13 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.PostQuestionOp
 
         }
 
+        public PostQuestionCmd(int questionId, string title, string body)
+        {
+            QuestionId = questionId;
+            Title = title;
+            Body = body;
+        }
+
         public PostQuestionCmd(int questionId, string title, string body, List<string> tags, int votes)
         {
             QuestionId = questionId;
@@ -28,9 +35,9 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.PostQuestionOp
         [Required]
         [MaxLength(1000)]
         public string Body { get; set; }
-        [Required]
+
         public List<string> Tags { get; set; }
-        [Required]
+
         public int Votes { get; set; }
     }
 }

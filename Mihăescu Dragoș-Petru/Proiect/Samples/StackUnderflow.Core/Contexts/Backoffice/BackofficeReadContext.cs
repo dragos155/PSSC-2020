@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using StackUnderflow.DatabaseModel.Models;
 using StackUnderflow.EF.Models;
 
 namespace StackUnderflow.Domain.Core.Contexts

@@ -13,6 +13,7 @@ using Access.Primitives.EFCore;
 using StackUnderflow.Domain.Schema.Backoffice.InviteTenantAdminOp;
 using StackUnderflow.Domain.Schema.Backoffice;
 using LanguageExt;
+using StackUnderflow.DatabaseModel.Models;
 
 namespace StackUnderflow.API.Rest.Controllers
 {

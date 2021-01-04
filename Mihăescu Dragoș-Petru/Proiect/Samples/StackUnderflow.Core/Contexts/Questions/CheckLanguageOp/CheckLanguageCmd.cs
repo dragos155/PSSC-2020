@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.CheckLanguageOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.CheckLanguageOp
 {
     public class CheckLanguageCmd
     {
@@ -12,11 +12,14 @@ namespace StackUnderflow.Domain.Schema.Questions.CheckLanguageOp
 
         }
 
-        public CheckLanguageCmd(string text)
+        public CheckLanguageCmd(int replyId, string text)
         {
+            replyId = ReplyId;
             Text = text;
         }
 
+        [Required]
+        public int ReplyId { get; set; }
         [Required]
         public string Text { get; }
     }

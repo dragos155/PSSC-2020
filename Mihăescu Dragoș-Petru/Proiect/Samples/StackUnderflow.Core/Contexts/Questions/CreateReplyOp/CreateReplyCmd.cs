@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
+namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
 {
     public class CreateReplyCmd
     {

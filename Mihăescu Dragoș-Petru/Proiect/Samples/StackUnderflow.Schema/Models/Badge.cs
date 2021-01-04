@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackUnderflow.DatabaseModel.Models;
+using System;
 using System.Collections.Generic;
 
 namespace StackUnderflow.EF.Models

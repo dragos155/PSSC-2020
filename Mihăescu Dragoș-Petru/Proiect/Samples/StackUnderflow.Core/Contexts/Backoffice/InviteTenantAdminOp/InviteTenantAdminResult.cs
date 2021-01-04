@@ -1,5 +1,6 @@
 ﻿using Access.Primitives.Extensions.Cloning;
 using CSharp.Choices;
+using StackUnderflow.DatabaseModel.Models;
 using StackUnderflow.EF.Models;
 
 namespace StackUnderflow.Domain.Schema.Backoffice.InviteTenantAdminOp

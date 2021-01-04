@@ -3,6 +3,7 @@ using Access.Primitives.EFCore.DSL;
 using Access.Primitives.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using StackUnderflow.DatabaseModel.Models;
 
 namespace StackUnderflow.EF.Models
 {
@@ -44,7 +45,7 @@ namespace StackUnderflow.EF.Models
         }
 
         protected virtual string DefaultSchema => "base";
-
+        /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -64,7 +65,7 @@ namespace StackUnderflow.EF.Models
                     .IsRequired()
                     .HasMaxLength(100);
             });
-
+          
             modelBuilder.Entity<Post>(entity =>
             {
                 entity.HasKey(e => new { e.TenantId, e.PostId });
@@ -365,8 +366,9 @@ namespace StackUnderflow.EF.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
-        }
-
+        }*/
+           
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+           
     }
 }
